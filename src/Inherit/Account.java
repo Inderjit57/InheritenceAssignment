@@ -10,9 +10,7 @@ public class Account {
 	private String validAccountNumber = "1234";
 	private String validPassword = "12345";
 	public int creditCvc = 222;
-	public int debitCvc;
-	
-	
+
 	public Account() {
 		System.out.println("Start Verification");
 	}
@@ -27,15 +25,12 @@ public class Account {
 			return "";
 		} else {
 			isValid = false;
-		    return "Invalid";	
+			return "Invalid";
 		}
 	}
-	public int getCreditCvc(){
-	    return creditCvc;
-	}
-	
-	public int getDebitCvc(){
-	    return debitCvc;
+
+	public int getCreditCvc() {
+		return creditCvc;
 	}
 
 }
