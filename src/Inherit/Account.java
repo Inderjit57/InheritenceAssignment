@@ -12,7 +12,7 @@ public class Account {
 	public Account() {
 		System.out.println("Start Verification");
 	}
-	
+
 	// Account verification
 	public String getAccLogin() {
 		System.out.println("Enter Account user number");
@@ -27,6 +27,5 @@ public class Account {
 			return "";
 		}
 	}
-	
 
 }

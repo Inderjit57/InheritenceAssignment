@@ -2,7 +2,7 @@
  * The Functionality of this program works as per the following steps
  * 1. Choose the TYPE of card: Debit/Credit
  * 2. Inherit from Account Class to verify Account login
- * 3. Once Logged in, it will do the Debit/Credit transaction
+ * 3. Once Logged in, it will do Debit/Credit withdraw money transaction only
  * 4. Ask to change the Debit/Credit card number
  */
 package Inherit;
@@ -28,7 +28,8 @@ public class MainClass {
 			Debit debit = new Debit(debitBalance);
 			debit.getAccLogin(); // Inherit from Account to verify Account login
 			if (debit.isValid == true) {
-				System.out.println("Remaining Balance: " + debit.getWithdrawalTransaction()); // Money withdraw transaction
+				System.out.println("Remaining Balance: " + debit.getWithdrawalTransaction()); // Money withdraw
+																								// transaction
 			} else if (debit.isValid == false) {
 				System.out.println("Check Card number or Password");
 				break;
@@ -44,7 +45,7 @@ public class MainClass {
 				break;
 			}
 			break;
-			
+
 		case "Credit":
 			Credit credit = new Credit(creditBalance);
 			credit.getAccLogin(); // Inherit from Account to verify Account login
