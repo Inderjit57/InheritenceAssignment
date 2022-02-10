@@ -28,6 +28,7 @@ public class MainClass {
 			Debit debit = new Debit(debitBalance);
 			debit.getAccLogin(); // Inherit from Account to verify Account login
 			if (debit.isValid == true) {
+			    debit.getWithdrawalTransaction();
 				System.out.println("Remaining Balance: " + debit.getWithdrawalTransaction()); // Money withdraw
 																								// transaction
 			} else if (debit.isValid == false) {
@@ -50,11 +51,20 @@ public class MainClass {
 			Credit credit = new Credit(creditBalance);
 			credit.getAccLogin(); // Inherit from Account to verify Account login
 			if (credit.isValid == true) {
-				System.out.println("Credit limit left: " + credit.balanceOwe());
+			    credit.balance();
+			    if (credit.cvc == credit.creditCvc){
+				System.out.println("Credit limit left: " + credit.balance());
+				System.out.println("Balance deposit"); // Balance deposit to credit Card
+				double moneyDeposit = sc.nextDouble();
+				System.out.println("Available Credit: " + credit.setBalanceDeposit(moneyDeposit));
+			    }
 			} else if (credit.isValid == false) {
+			    if (credit.cvc != credit.creditCvc){
 				System.out.println("Check Card number or Password");
 				break;
+			    }
 			}
+			
 			System.out.println("Do you want to change Debit Card number?"); // Card change permission
 			changeCard = sc.next();
 			System.out.println("enter new credit card num");

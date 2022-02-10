@@ -7,14 +7,16 @@ public class Account {
 	Scanner sc = new Scanner(System.in);
 
 	boolean isValid;
-	private String validAccountNumber = "222333";
+	private String validAccountNumber = "1234";
 	private String validPassword = "12345";
-
+	public int creditCvc = 222;
+	public int debitCvc;
+	
+	
 	public Account() {
 		System.out.println("Start Verification");
 	}
 
-	// Account verification
 	public String getAccLogin() {
 		System.out.println("Enter Account user number");
 		String accountNumber = sc.next();
@@ -25,8 +27,15 @@ public class Account {
 			return "";
 		} else {
 			isValid = false;
-			return "";
+		    return "Invalid";	
 		}
+	}
+	public int getCreditCvc(){
+	    return creditCvc;
+	}
+	
+	public int getDebitCvc(){
+	    return debitCvc;
 	}
 
 }
