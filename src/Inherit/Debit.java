@@ -1,3 +1,4 @@
+// Debit Class does the withdrwal function only
 package Inherit;
 
 import java.util.Scanner;

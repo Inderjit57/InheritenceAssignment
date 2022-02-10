@@ -1,3 +1,4 @@
+// Credit Class does the money withdrwal and Calculate interest function only
 package Inherit;
 
 import java.util.Scanner;

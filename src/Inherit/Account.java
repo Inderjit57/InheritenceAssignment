@@ -1,3 +1,4 @@
+// Account Class verify the Login function
 package Inherit;
 
 import java.util.Scanner;
