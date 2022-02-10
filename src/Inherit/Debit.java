@@ -31,5 +31,4 @@ public class Debit extends Account {
 		remainingBalance = (balance - moneyWithdraw);
 		return remainingBalance;
 	}
-
 }
