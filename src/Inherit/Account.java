@@ -24,7 +24,7 @@ public class Account {
 			return "";
 		} else {
 			isValid = false;
-			return "Invalid";
+			return "";
 		}
 	}
 	
