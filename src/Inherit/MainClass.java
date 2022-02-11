@@ -26,10 +26,6 @@ public class MainClass {
 		switch (chooseAcc) {
 		case "Debit":
 			Debit debit = new Debit(debitBalance);
-			System.out.println("Enter Account user number");
-			String accountNumber = sc.next();
-			System.out.println("Enter password");
-			String password = sc.next();
 			debit.getAccLogin(); // Inherit from Account to verify Account login
 			if (debit.isValid == true) {
 				System.out.println("Remaining Balance: " + debit.getWithdrawalTransaction()); // Money withdraw

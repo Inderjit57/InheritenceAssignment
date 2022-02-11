@@ -9,7 +9,6 @@ public class Credit extends Account {
 	private double balanceAvaliable;
 	private double creditLimit;
 	private double interestCharge = 0.22;
-	public int cvc;
 
 	public Credit(double creditLimit) {
 		this.creditLimit = creditLimit;
