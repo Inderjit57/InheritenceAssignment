@@ -26,11 +26,16 @@ public class MainClass {
 		switch (chooseAcc) {
 		case "Debit":
 			Debit debit = new Debit(debitBalance);
+			System.out.println("Enter Account user number");
+			String accountNumber = sc.next();
+			System.out.println("Enter password");
+			String password = sc.next();
 			debit.getAccLogin(); // Inherit from Account to verify Account login
 			if (debit.isValid == true) {
 				System.out.println("Remaining Balance: " + debit.getWithdrawalTransaction()); // Money withdraw
 																								// transaction
-			} else if (debit.isValid == false) {
+	
+				} else if (debit.isValid == false) {
 				System.out.println("Check Card number or Password");
 				break;
 			}
@@ -55,15 +60,10 @@ public class MainClass {
 					System.out.println("Balance deposit"); // Balance deposit to credit Card
 					double moneyDeposit = sc.nextDouble();
 					System.out.println("Available Credit: " + credit.setBalanceDeposit(moneyDeposit));
-				
-
 			} else if (credit.isValid == false) {
-				if (credit.cvc != credit.creditCvc) {
 					System.out.println("Check Card number or Password");
 					break;
-				}
 			}
-
 			System.out.println("Do you want to change Debit Card number?"); // Card change permission
 			changeCard = sc.next();
 			System.out.println("enter new credit card num");

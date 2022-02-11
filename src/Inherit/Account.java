@@ -9,7 +9,6 @@ public class Account {
 	boolean isValid;
 	private String validAccountNumber = "1234";
 	private String validPassword = "12345";
-	public int creditCvc = 222;
 
 	public Account() {
 		System.out.println("Start Verification");
@@ -27,10 +26,6 @@ public class Account {
 			isValid = false;
 			return "Invalid";
 		}
-	}
-
-	public int getCreditCvc() {
-		return creditCvc;
 	}
 
 }
