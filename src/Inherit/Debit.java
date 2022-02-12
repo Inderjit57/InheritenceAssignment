@@ -1,15 +1,11 @@
 // Debit Class does the withdrwal function only
 package Inherit;
 
-import java.util.Scanner;
-
 public class Debit extends Account {
-	Scanner sc = new Scanner(System.in);
 
 	private int cardNum = 444555;
 	private double balance;
 	public double remainingBalance;
-	private double moneyWithdraw;
 	public boolean isBalanceMore;
 
 	public Debit(double balance) {
@@ -27,18 +23,21 @@ public class Debit extends Account {
 	}
 
 	// Getter method to widthdraw money and show remaining balance
-	public double getWithdrawalTransaction() {
+	public double getWithdrawalTransaction(double moneyWithdraw) {
 		System.out.println("Debit cardnumber: " + getCardNum());
-		System.out.println("Enter money to withdraw");
-		moneyWithdraw = sc.nextDouble();
 		if (moneyWithdraw < balance) {
 			isBalanceMore = true;
 			remainingBalance = (balance - moneyWithdraw);
 			return remainingBalance;
-		} else {
+		} else if (moneyWithdraw > balance) {
 			isBalanceMore = false;
+
 		}
 		return 0;
+	}
+
+	public double getRemainingBalance() {
+		return remainingBalance;
 	}
 
 }
